@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contact">
+
+  <ion-card>
+
+    <ion-card-content>
+      <img src="{{contact.photoUrl}}"/>
+      <h2>{{contact.nom}} {{contact.prenom}}</h2>
+      <h3>Data Naissance: {{contact.dateNaissance}}</h3>
+    </ion-card-content>
+
+    <ion-list>
+      <a href="tel:{{contact.tel}}" ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Call mobile</p>
+        <h2>{{contact.tel}}</h2>
+      </a>
+
+      <a href="mailto:{{contact.email}}" ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <p>Email</p>
+        <h2>{{contact.email}}</h2>
+      </a>
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>

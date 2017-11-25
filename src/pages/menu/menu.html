@@ -1,0 +1,28 @@
+<ion-menu [content]="content" >
+  <ion-header>
+    <ion-toolbar  style="background-color: #C2A5A5 !important" >
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+    <ion-list >
+      <img src="../../assets/imgs/logo.png" class="menu-logo"/>
+      <ion-list-header>Home</ion-list-header>
+      <button [class.activePageHighlight]="checkActive(p)" menuClose ion-item *ngFor="let p of homeMenuItems" (click)="openPage(p)" >
+        <ion-icon item-left [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+      <br><br>
+      <ion-list-header>Help</ion-list-header>
+      <button [class.activePageHighlight]="checkActive(p)" menuClose ion-item *ngFor="let p of helpMenuItems" (click)="openPage(p)" >
+        <ion-icon item-left [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

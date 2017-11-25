@@ -1,0 +1,23 @@
+page-menu {
+  ion-list{
+    background-color: #6aadce;
+    //background-image: url("../../assets/imgs/sidebar.png");
+  }
+  .welcome-title{
+    color: rgb(255, 145, 145);
+    font-size: 80px;
+    border-radius: 44px;
+    text-shadow: rgb(3, 3, 3) 4px 4px 4px;
+  }
+  ion-row {
+    align-items: center;
+    text-align: center;
+
+  }
+  .menu-logo {
+    height: 150px;
+    margin: 20px 20px 20px 70px;
+    border-radius: 20px;
+
+  }
+}

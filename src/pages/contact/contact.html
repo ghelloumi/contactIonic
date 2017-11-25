@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchContacts()"></ion-searchbar>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let contact of contacts">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{contact.photoUrl}}"/>
+        </ion-avatar>
+        <p>{{ contact.prenom }}</p>
+      </ion-item>
+      <ion-item-options slide="left">
+        <button ion-button outline item-end icon-left (click)="getDetails(contact)">
+          <ion-icon name="clipboard"></ion-icon>
+          Get Details
+        </button>
+
+        <button ion-button outline item-end icon-left (click)="deleteContact(contact.id)">
+          <ion-icon name="ios-archive"></ion-icon>
+          Delete Contact
+        </button>
+
+        <button ion-button outline item-end icon-left (click)="modifyContact(contact)">
+          <ion-icon name="ios-create"></ion-icon>
+          Modify Contact
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

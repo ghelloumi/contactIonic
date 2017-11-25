@@ -1,0 +1,37 @@
+page-add-contact {
+    .scroll-content {
+      display:flex;
+      flex-direction: column;
+      overflow:hidden;
+      background: url("../../assets/imgs/wallpaper.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+    }
+
+    .next-button {
+      width: 100%;
+      border-radius: 5px;
+      font-size: 1.2em;
+      border: 1px solid #fff;
+      background-color: rgba(57, 172, 220, 0.8);
+    }
+
+    *::-webkit-input-placeholder {
+      color: #aba5a6;
+    }
+
+    form{
+      margin-top: 10%;
+    }
+
+    ion-row{
+      margin-bottom: 10px;
+    }
+
+    ion-item{
+      border-radius: 5px;
+    }
+
+
+}
